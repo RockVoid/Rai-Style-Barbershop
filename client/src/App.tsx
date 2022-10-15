@@ -1,10 +1,20 @@
+import { CssBaseline, ThemeProvider } from "@mui/material";
 import React from "react";
 import "./App.css";
 
+import Header from "./components/ui/Header";
+import HeroSection from "./components/ui/Hero-section";
+import TopHeader from "./components/ui/Top-Header";
+import { appTheme } from "./themes/theme";
+
 function App() {
   return (
-    // eslint-disable-next-line react/jsx-filename-extension
-    <h1 className="text-3x1 font-bold underline text-red-600">Simple React</h1>
+    <ThemeProvider theme={appTheme}>
+      <CssBaseline enableColorScheme />
+      <TopHeader />
+      <Header />
+      <HeroSection />
+    </ThemeProvider>
   );
 }
 

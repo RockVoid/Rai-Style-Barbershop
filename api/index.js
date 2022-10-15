@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api/users", userRoute);
 
 // Middleware para gerenciar falhas nas requisições
-app.use((error, req, res, next) => {
+app.use((error, req, res) => {
   const errorStatus = error.status || 500;
   const errorMessage = error.message || "Something went wrong!";
 
